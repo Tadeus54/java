@@ -1,0 +1,66 @@
+import java.util.Arrays;
+    public class Rectangle1 {
+   private int x1;
+   private int y1;
+    private int x2;
+    private int y2;
+    public Rectangle1(int x1, int y1, int x2, int y2)
+    {
+this.x1=x1;
+        this.y1=y1;
+        this.x2=x2;
+        this.y2=y2;
+
+    }
+    public Rectangle1(int shirina, int visota)
+    {
+        this.x1=0;
+        this.y1=0;
+        this.x2=shirina;
+        this.y2=visota;
+
+    }
+    public Rectangle1()
+    {
+        this.x1=0;
+        this.y1=0;
+        this.x2=0;
+        this.y2=0;
+    }
+
+        public String toString() {
+            return "X1 = " + x1 + "\n" + "Y1 = " + y1 + "\n" + "X2 = " + x2 + "\n" + "Y2 = " + y2;
+        }
+       public int move (int dx, int dy){
+        int newZnach[] = new int[4];
+           x1 = x1+dx;
+           x2 = x2+dx;
+           y1 = y1+dy;
+            y2 = y2+dy;
+           return newZnach[x1, x2, ];
+
+
+        }
+}
+
+import java.awt.*;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Прямоугольник 1:");
+        Rectangle1 r1 = new Rectangle1(5, 4, 10, 3);
+        System.out.println(r1.toString());
+        System.out.println("Смещение:");
+        System.out.println("Прямоугольник 2:");
+        Rectangle1 r2 = new Rectangle1( 7, 4);
+        System.out.println(r2.toString());
+        System.out.println("Смещение:");
+        System.out.println("Прямоугольник 3:");
+        Rectangle1 r3 = new Rectangle1();
+        System.out.println(r3.toString());
+        System.out.println("Смещение:");
+        System.out.println(r3.move(2,2));
+        System.out.println(r3.toString());
+
+    }
+}
